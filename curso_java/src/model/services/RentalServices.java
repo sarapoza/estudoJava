@@ -7,7 +7,6 @@ public class RentalServices {
 	
 	private Double pricePerDay;
 	private Double pricePerHour;
-
 	private TaxService taxService;
 
 	public RentalServices(Double pricePerDay, Double pricePerHour, TaxService taxService) {
