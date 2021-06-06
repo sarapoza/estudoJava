@@ -23,22 +23,22 @@ public class Main {
 		
 		System.out.println("Enter contract data");
 		System.out.print("Number: ");
-		Integer numberCt = sc.nextInt();
+		Integer numberContract = sc.nextInt();
 		System.out.print("Date (dd/MM/yyyy): ");
 		Date date = sdf.parse(sc.next());
 		System.out.print("Contract value: ");
 		Double value = sc.nextDouble();
 		
-		Contract ct = new Contract(numberCt, date, value);
+		Contract contract = new Contract(numberContract, date, value);
 		
 		System.out.print("Enter number of installments: ");
 		Integer installment = sc.nextInt();
 		
 		ContractService cs = new ContractService(new PaypalService());
-		cs.processContract(ct, installment);
+		cs.processContract(contract, installment);
 		
 		System.out.println("Installments: ");
-		for (Installment it : ct.getInstallments()) {
+		for (Installment it : contract.getInstallments()) {
 			System.out.println(it);
 		}
 		
