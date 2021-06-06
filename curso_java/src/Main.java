@@ -67,4 +67,8 @@ public class Main {
 
 		sc.close();	
 	}
+	
+	public String retornaValor() {
+		return "x";
+	}
 }
