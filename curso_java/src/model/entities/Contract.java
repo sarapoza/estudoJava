@@ -6,24 +6,24 @@ import java.util.List;
 
 public class Contract {
 
-	private Integer numberCont;
+	private Integer numberContract;
 	private Date dateContract;
 	private Double totalValue;
 	
 	List <Installment> installments = new ArrayList<Installment>();
 	
 	public Contract(Integer numberContract, Date dateContract, Double totalValue) {
-		this.numberCont = numberContract;
+		this.numberContract = numberContract;
 		this.dateContract = dateContract;
 		this.totalValue = totalValue;
 	}
 
 	public Integer getNumberContract() {
-		return numberCont;
+		return numberContract;
 	}
 
 	public void setNumberContract(Integer numberContract) {
-		this.numberCont = numberContract;
+		this.numberContract = numberContract;
 	}
 
 	public Date getDateContract() {
