@@ -29,18 +29,19 @@ public class Main {
 		System.out.print("Contract value: ");
 		Double value = sc.nextDouble();
 		
-		Contract contract = new Contract(numberContract, date, value);
+		Contract ct = new Contract(numberContract, date, value);
 		
 		System.out.print("Enter number of installments: ");
 		Integer installment = sc.nextInt();
 		
 		ContractService cs = new ContractService(new PaypalService());
-		cs.processContract(contract, installment);
+		cs.processContract(ct, installment);
 		
 		System.out.println("Installments: ");
-		for (Installment it : contract.getInstallments()) {
+		for (Installment it : ct.getInstallments()) {
 			System.out.println(it);
 		}
+
 		
 //		System.out.println("Enter rental data");
 //		System.out.print("Car model: ");
@@ -68,7 +69,11 @@ public class Main {
 		sc.close();	
 	}
 	
+
 	public String retornaValor() {
 		return "x";
+	}
+	
+	public void teste() {	
 	}
 }
